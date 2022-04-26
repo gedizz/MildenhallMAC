@@ -1,4 +1,4 @@
-#!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
+#!/usr/bin/python3
 import cgitb
 import cgi
 from string import Template
@@ -263,7 +263,13 @@ width:100%;
         <table style="border:0px;">
 
           <tr>
-            <td class="special"></td>
+            <td align=center class="special">
+                <p><u>Instructions:</u></p>
+                <p>Enter fuel load</p>
+                <p>Enter basic weight, moment and fuel density</p>
+                <p>Press calculate</p>
+                <p style="color:red;">Please use only whole numbers or decimals. No symbols</p>
+            </td>
           </tr>
 
         </table> 
