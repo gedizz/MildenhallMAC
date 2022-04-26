@@ -2,12 +2,15 @@
 # arm
 #=IF(B8=" ", " ", +num1*(q*2/f)^2+num2*(q*2/f)^1.5+9.81*(q*2/f)^0.5-num3*(q*2/f)+num4)
 # Calculates the moment for any tank given a weight and arm
-def tankMoment(w, arm):
+def tankMoment(w: float, arm: float):
+    w = float(w)
     return round(w * arm / 1000, 1)
 
 
 # Calculates the arm for either reserve tank given weight and fuel density
-def reserveArmCalculation(w, d):
+def reserveArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     num1 = -0.0002315
     num2 = 0.02154
     num3 = 0.6816
@@ -18,7 +21,9 @@ def reserveArmCalculation(w, d):
 
 # num1*(B9*2/D4)^3.4-num2*(B9*2/D4)^2.4+num3*(B9*2/D4)^2-num4*(B9*2/D4)^1.6+num5)
 # Calculates the arm for main tank 1 or 4 given weight and fuel density
-def mainOneAndFourArmCalculation(w, d):
+def mainOneAndFourArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     num1 = 0.00000000004685
     num2 = 0.000001002
     num3 = 0.00003398
@@ -30,7 +35,9 @@ def mainOneAndFourArmCalculation(w, d):
 
 #  num1*(B10*2/D4)^3.5   +num2*(B10*2/D4)^3    -num3*(B10*2/D4)^2     +num4*(B10*2/D4)^0.5     +num5 )
 # Calculates the arm for main tank 2 or 3 given weight and fuel density
-def mainTwoAndThreeArmCalculation(w, d):
+def mainTwoAndThreeArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     num1 = -0.00000000001632
     num2 = 0.000000001656
     num3 = 0.000003255
@@ -41,10 +48,11 @@ def mainTwoAndThreeArmCalculation(w, d):
     return round(total, 1)
 
 
-
 # -0.000003029*(B14/D4)^2.5+0.00018168*(B14/D4)^2+-0.134*(B14/D4)+555.16,
 # Calculates the arm for forward body given weight and fuel density
-def forwardBodyArmCalculation(w, d):
+def forwardBodyArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     if w / d <= 1231:
         num1 = -0.000003029
         num2 = 0.00018168
@@ -67,7 +75,9 @@ def forwardBodyArmCalculation(w, d):
 
 # num1*(B15/D4)^5     -num2*(B15/D4)^2     -num3*(B15/D4)^0.25   +num4,
 # Calculates the center wing arm given fuel weight and fuel density
-def centerArmCalculation(w, d):
+def centerArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     if w / d <= 3692:
         num1 = 0.000000000000000008802
         num2 = 0.000000885
@@ -93,7 +103,9 @@ def centerArmCalculation(w, d):
 
 # Calculates aft body arm given fuel weight and density
 # num1*(B16/D4)^2.5          +num2*(B16/D4)^2           +num3*(B16/D4)+num4
-def aftArmCalculation(w, d):
+def aftArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     if w / d <= 769:
         num1 = -0.00000204
         num2 = 0.00009122
@@ -126,7 +138,9 @@ def aftArmCalculation(w, d):
 
 # Calculates the arm of upper deck given fuel weight and density
 # num1*(B17/D4)^3         -num2*(B17/D4)^2          +num3*(B17/D4)+num4)
-def upperDeckArmCalculation(w, d):
+def upperDeckArmCalculation(w: float, d: float):
+    w = float(w)
+    d = float(d)
     num1 = 0.000000000273
     num2 = 0.000002736
     num3 = 0.00741
@@ -134,8 +148,6 @@ def upperDeckArmCalculation(w, d):
     weightByDensity = (w / d)
     total = num1 * weightByDensity ** 3 - num2 * weightByDensity ** 2 + num3 * weightByDensity + num4
     return round(total, 1)
-
-
 
 
 
