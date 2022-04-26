@@ -2,18 +2,45 @@
 import cgitb
 import cgi
 from string import Template
-
-
 cgitb.enable()
-
 print("Content-Type: text/html;charset=utf-8")
 print()  # <----------- additional newline for header/body separation.
 # <meta http-equiv="refresh" content="60" >
 # Below is the return to other parts of the website
-form = cgi.FieldStorage()
-reserve1 = form.getvalue('1reserve')
-print(reserve1)
 
+# Receiving data from form after Calculate button is pressed. Used to calculate and update MAC
+form = cgi.FieldStorage()
+
+data = {
+    "reserve1": form.getvalue("1reserve"),
+    "main1": form.getvalue("1main"),
+    "main2": form.getvalue("2main"),
+    "forwardbody": form.getvalue("forwardbody"),
+    "aftbody": form.getvalue("aftbody"),
+    "upperdeck": form.getvalue("upperdeck"),
+    "main3": form.getvalue("3main"),
+    "main4": form.getvalue("4main"),
+    "reserve4": form.getvalue("4reserve")
+}
+# If no data is received (likely first going to site) then set all values to 0 so we dont accidentally get NoneType
+for x in data:
+    if data[x] == None:
+        data[x] = "0"
+
+# reserve1 = form.getvalue('1reserve')
+# main1 = form.getvalue('1main')
+# main2 = form.getvalue('2main')
+# forwardBody = form.getvalue('forwardbody')
+# aftBody = form.getvalue('aftbody')
+# upperDeck = form.getvalue('upperdeck')
+# main3 = form.getvalue('3main')
+# main4 = form.getvalue('4main')
+# reserve4 = form.getvalue('4reserve')
+
+
+
+
+# Below is all HTML
 html = """
 <!DOCTYPE html>
 <html>
@@ -73,13 +100,13 @@ width:100%;
   <form action="main.py" id="form1"><input type="hidden" name="id" value="1" method="get"/></form>
   
   <tr>
-    <td align=center><input form="form1" type="text" name="1reserve" value="" /></td>
-    <td align=center><input form="form1" type="text" name="1main" value="" /></td>
-    <td align=center><input form="form1" type="text" name="2main" value="" /></td>
-    <td align=center><input form="form1" type="text" name="2main" value="" /></td>
-    <td align=center><input form="form1" type="text" name="3main" value="" /></td>
-    <td align=center><input form="form1" type="text" name="4main" value="" /></td>
-    <td align=center><input form="form1" type="text" name="4reserve" value="" /></td>
+    <td align=center><input form="form1" type="text" name="1reserve" value="$r1" /></td>
+    <td align=center><input form="form1" type="text" name="1main" value="$m1" /></td>
+    <td align=center><input form="form1" type="text" name="2main" value="$m2" /></td>
+    <td align=center><input form="form1" type="text" name="forwardbody" value="$fwd" /></td>
+    <td align=center><input form="form1" type="text" name="3main" value="$m3" /></td>
+    <td align=center><input form="form1" type="text" name="4main" value="$m4" /></td>
+    <td align=center><input form="form1" type="text" name="4reserve" value="$r4" /></td>
   </tr>
   
   <tr>
@@ -96,7 +123,7 @@ width:100%;
     <td class="special"></td>
     <td class="special"></td>
     <td class="special"></td>
-    <td align=center><input form="form1" type="text" name="aft" value="" /></td>
+    <td align=center><input form="form1" type="text" name="aftbody" value="$aft" /></td>
     <td class="special"></td>
     <td class="special"></td>
     <td class="special"></td>
@@ -116,7 +143,7 @@ width:100%;
     <td class="special"></td>
     <td class="special"></td>
     <td class="special"></td>
-    <td align=center><input form="form1" type="text" name="upper" value="" /></td>
+    <td align=center><input form="form1" type="text" name="upperdeck" value="$up" /></td>
     <td class="special"></td>
     <td class="special"></td>
     <td class="special"></td>
@@ -144,5 +171,18 @@ width:100%;
 </html>
 
 """
-print(html)
+
+html_replaced = Template(html).safe_substitute(
+    r1="{data[reserve1]}",
+    m1="{data[main1]}",
+    m2="{data[main2]}",
+    fwd="{data[forwardBody]}",
+    aft="{data[aftBody]}",
+    up="{data[upperDeck]}",
+    m3="{data[main3]}",
+    m4="{data[main4]}",
+    r4="%s" % (data["reserve4"]))
+print(html_replaced)
+
+# print(html)
 
