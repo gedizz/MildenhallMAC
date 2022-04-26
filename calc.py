@@ -1,12 +1,4 @@
-fuelDensity = 6.7
 
-reserveWeight = 2900
-mainOneFourWeight = 11000
-mainTwoThreeWeight = 11000
-forwardWeight = 4000
-centerWeight = 20000
-aftWeight = 2000
-upperDeckWeight = 200
 # arm
 #=IF(B8=" ", " ", +num1*(q*2/f)^2+num2*(q*2/f)^1.5+9.81*(q*2/f)^0.5-num3*(q*2/f)+num4)
 # Calculates the moment for any tank given a weight and arm
@@ -148,38 +140,4 @@ def upperDeckArmCalculation(w, d):
 
 
 
-reserveArm = reserveArmCalculation(reserveWeight, fuelDensity)
-reserveMoment = tankMoment(reserveWeight, reserveArm)
 
-oneFourArm = mainOneAndFourArmCalculation(mainOneFourWeight, fuelDensity)
-oneFourMoment = tankMoment(mainOneFourWeight, oneFourArm)
-
-twoThreeArm = mainTwoAndThreeArmCalculation(mainTwoThreeWeight, fuelDensity)
-twoThreeMoment = tankMoment(mainTwoThreeWeight, twoThreeArm)
-
-forwardArm = forwardBodyArmCalculation(forwardWeight, fuelDensity)
-forwardMoment = tankMoment(forwardWeight, forwardArm)
-
-centerArm = centerArmCalculation(centerWeight, fuelDensity)
-centerMoment = tankMoment(centerWeight, centerArm)\
-
-aftArm = aftArmCalculation(aftWeight, fuelDensity)
-aftMoment = tankMoment(aftWeight, aftArm)
-
-upperDeckArm = upperDeckArmCalculation(upperDeckWeight, fuelDensity)
-upperDeckMoment = tankMoment(upperDeckWeight, upperDeckArm)
-
-print(f"Reserve Arm: {reserveArm}\n"
-      f"Reserve Moment: {reserveMoment}\n"
-      f"Main 1 and 4 Arm: {oneFourArm}\n"
-      f"Main 1 and 4 Moment: {oneFourMoment}\n"
-      f"Main 2 and 3 Arm: {twoThreeArm}\n"
-      f"Main 2 and 3 Moment: {twoThreeMoment}\n"
-      f"Forward Arm: {forwardArm}\n"
-      f"Forward Moment: {forwardMoment}\n"
-      f"Center Arm: {centerArm}\n"
-      f"Center Moment: {centerMoment}\n"
-      f"Aft Arm: {aftArm}\n"
-      f"Aft Moment: {aftMoment}\n"
-      f"Upper Deck Arm: {upperDeckArm}\n"
-      f"Upper Deck Moment = {upperDeckMoment}")
