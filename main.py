@@ -37,22 +37,27 @@ for x in data:
 # main4 = form.getvalue('4main')
 # reserve4 = form.getvalue('4reserve')
 
-
+# <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 # Below is all HTML
 html = """
 <!DOCTYPE html>
 <html>
-
+<title>Mildenhall MAC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-table, th {
+table {
   border:1px solid black;
+  font-size: 1vw
+}
 
+th {
+border:1px solid black;
 }
 
 .special {
@@ -62,7 +67,6 @@ border:0px;
 td {
   width: 14.2%;
   border:1px solid black;
-  
 }
 
 input {
@@ -157,6 +161,12 @@ width:100%;
     <input type="submit" form="form1" value="Calculate">
 </div>
 
+<div align=center style=margin-top:10px>
+    <form action="main.py">
+        <input type="submit" value="Reset" />
+    </form>
+</div>
+
 
 </body>
 
@@ -173,14 +183,14 @@ width:100%;
 """
 
 html_replaced = Template(html).safe_substitute(
-    r1="{data[reserve1]}",
-    m1="{data[main1]}",
-    m2="{data[main2]}",
-    fwd="{data[forwardBody]}",
-    aft="{data[aftBody]}",
-    up="{data[upperDeck]}",
-    m3="{data[main3]}",
-    m4="{data[main4]}",
+    r1="%s" % (data["reserve1"]),
+    m1="%s" % (data["main1"]),
+    m2="%s" % (data["main2"]),
+    fwd="%s" % (data["forwardbody"]),
+    aft="%s" % (data["aftbody"]),
+    up="%s" % (data["upperdeck"]),
+    m3="%s" % (data["main3"]),
+    m4="%s" % (data["main4"]),
     r4="%s" % (data["reserve4"]))
 print(html_replaced)
 
