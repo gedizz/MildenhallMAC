@@ -16,6 +16,7 @@ data = {
     "main1": form.getvalue("1main"),
     "main2": form.getvalue("2main"),
     "forwardbody": form.getvalue("forwardbody"),
+    "centerwing": form.getvalue("centerwing"),
     "aftbody": form.getvalue("aftbody"),
     "upperdeck": form.getvalue("upperdeck"),
     "main3": form.getvalue("3main"),
@@ -89,12 +90,34 @@ width:100%;
 
 <!-- Main Table -->
 <table style="width:100%">
-
+    
+    
+  <tr>
+    <td class="special"></td>
+    <td class="special"></td>
+    <td class="special"></td>
+    <th style="background-color:#ADADAA">Forward Body</th>
+    <td class="special"></td>
+    <td class="special"></td>
+    <td class="special"></td>
+  </tr>
+  
+  <tr>
+    <td class="special"></td>
+    <td class="special"></td>
+    <td class="special"></td>
+    <td align=center><input form="form1" type="text" name="forwardbody" value="$fwd" /></td>
+    <td class="special"></td>
+    <td class="special"></td>
+    <td class="special"></td>
+  </tr>
+  
+  
   <tr style="background-color:#ADADAA">
     <th>#1 Reserve</th>
     <th>#1 Main</th>
     <th>#2 Main</th>
-    <th>Forward Body</th>
+    <th>Center Wing</th>
     <th>#3 Main</th>
     <th>#4 Main</th>
     <th>#4 Reserve</th>
@@ -107,11 +130,12 @@ width:100%;
     <td align=center><input form="form1" type="text" name="1reserve" value="$r1" /></td>
     <td align=center><input form="form1" type="text" name="1main" value="$m1" /></td>
     <td align=center><input form="form1" type="text" name="2main" value="$m2" /></td>
-    <td align=center><input form="form1" type="text" name="forwardbody" value="$fwd" /></td>
+    <td align=center><input form="form1" type="text" name="centerwing" value="$center" /></td>
     <td align=center><input form="form1" type="text" name="3main" value="$m3" /></td>
     <td align=center><input form="form1" type="text" name="4main" value="$m4" /></td>
     <td align=center><input form="form1" type="text" name="4reserve" value="$r4" /></td>
   </tr>
+
   
   <tr>
     <td class="special"></td>
@@ -187,6 +211,7 @@ html_replaced = Template(html).safe_substitute(
     m1="%s" % (data["main1"]),
     m2="%s" % (data["main2"]),
     fwd="%s" % (data["forwardbody"]),
+    center="%s" % (data["centerwing"]),
     aft="%s" % (data["aftbody"]),
     up="%s" % (data["upperdeck"]),
     m3="%s" % (data["main3"]),
