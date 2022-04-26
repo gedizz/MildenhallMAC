@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
 import cgitb
 import cgi
 from string import Template
@@ -69,6 +69,7 @@ html = """
 <!DOCTYPE html>
 <html>
 <title>Mildenhall MAC</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -121,10 +122,13 @@ width:100%;
   display: table;
   clear: both;
 }
+
+
 </style>
 <body>
 
-<h2 align=center >Mildenhall %MAC Calculator</h2>
+<h1 align=center>Mil<img style="margin-bottom:7px; margin-left:1px;" src="fav32.png" alt="logo"/>enhall %MAC Calculator</h1>
+
 
 
 
@@ -340,7 +344,7 @@ width:100%;
 
 
 <!-- Footer -->
-<footer align=center style=margin-top:200px>
+<footer align=center style=margin-top:50px>
   <p>Created by A1C Geditz</p>
 </footer>
 
