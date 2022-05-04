@@ -77,8 +77,13 @@ html = """
 <style>
 
 table {
-  border:1px solid black;
-  font-size: 1vw
+  border:0px solid black;
+  font-size: .8vw
+}
+
+body {
+margin: 0px;
+padding: 0px;
 }
 
 .row {
