@@ -1,4 +1,9 @@
 #!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
+#!/usr/bin/env python3
+
+# Shebang to be added to my windows.
+#!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
+
 import cgitb
 import cgi
 from string import Template
@@ -74,7 +79,13 @@ html = """
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196094589935856" crossorigin="anonymous">
+</script>
+
+
 <style>
+
 
 table {
   border:0px solid black;
@@ -85,6 +96,7 @@ body {
 margin: 0px;
 padding: 0px;
 }
+
 
 .row {
 width: 100%
@@ -130,6 +142,12 @@ width:100%;
   content: "";
   display: table;
   clear: both;
+}
+
+@media only screen and (max-width: 800px) {
+  img.iosandroid {
+    width: 25vw
+  }
 }
 
 
@@ -342,6 +360,17 @@ width:100%;
 
 <div align=center style=margin-top:10px>
     <input type="submit" form="form1" value="Calculate">
+</div>
+
+
+<div align=center style=margin-top:10px>
+    <a href="https://apps.apple.com/us/app/mildenhall-mac/id1622921836"><img class="thatimage" src="ios.png" alt="iOS Link"></a>
+    <img src="android.png">
+</div>
+
+
+<div align=center>
+    <h2>Coming Soon!</h2>
 </div>
 
 
