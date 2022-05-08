@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+#solid {
+    margin: auto;
+    width: 80%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 /* add background to navbar */
 .topnav {
   background-color: #333;
@@ -18,6 +25,7 @@
   padding: 14px 14px;
   text-decoration: none;
   font-size: 17px;
+
 }
 
 /* change color on hover */
@@ -36,18 +44,166 @@ body {
 }
 
 .textarea {
-    padding: .5em 0 0 0;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(7, 1fr);
+    grid-gap: .25em .5em;
+    grid-template-areas:
+        "fb fb fb fb fb fb fb"
+        "oner onem twom ctr threem fourm fourr"
+        "aft aft aft aft aft aft aft"
+        "up up up up up up up";
+    padding: .5em;
     height: 100vh;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+@media only screen and (max-width: 800px) {
+    .textarea {
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+        gap: .25em .5em;
+        grid-template-areas:
+            "oner fb threem"
+            "onem ctr fourm"
+            "twom aft fourr"
+            ". up .";
+        padding: .5em;
+        height: 100vh;
+        background-image: url('bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+.cell h3 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADADAA;
+    width: 100%;
+    border: 2px solid black;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .cell h3 {
+        flex-basis: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ADADAA;
+        width: 100%;
+        border: 2px solid black;
+        font-size: 16px;
+    }
+}
+.cell input {
+    flex-basis: 70%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+#fwd {
+  grid-area: fb;
+  width: 13.78%;
+  justify-self: center;
+}
+
+#aftbody {
+  grid-area: aft;
+  width: 13.78%;
+  justify-self: center;
+}
+
+#upperdeck {
+  grid-area: up;
+  width: 13.78%;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 800px) {
+    #fwd {
+      grid-area: fb;
+      width: 100%;
+      justify-self: center;
+    }
+
+    #aftbody {
+      grid-area: aft;
+      width: 100%;
+      justify-self: center;
+    }
+
+    #upperdeck {
+      grid-area: up;
+      width: 100%;
+      justify-self: center;
+    }
+}
+
+
+#onereserve {
+  grid-area: oner;
+}
+
+#onemain {
+  grid-area: onem;
+}
+
+#twomain {
+  grid-area: twom;
+}
+
+#centerwing {
+  grid-area: ctr;
+}
+
+
+
+#threemain {
+  grid-area: threem;
+}
+
+#fourmain {
+  grid-area: fourm;
+}
+
+#fourreserve {
+  grid-area: fourr;
 }
 
 .footer {
     color: #ddd;
     background-color: #333;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
     position: sticky;
     bottom: 0;
+    border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        color: #ddd;
+        background-color: #333;
+        text-align: center;
+        font-size: 4vw;
+        position: sticky;
+        bottom: 0;
+        border-top: 1px solid white;
+    }
 }
 
 #headings {

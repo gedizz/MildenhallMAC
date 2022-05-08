@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Mildenhall MAC</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 <head>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mildenhall MAC</title>
 
 </head>
 
@@ -17,7 +17,8 @@
 
     <div id="headings">
         <h1 align=center>Mil<img style="margin-bottom:0px; margin-left:1px;" src="fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
-        <h2>blah blah this is a page for doing math</h2>
+        <hr id="solid">
+        <h2><em>Integrity First - Service Before Self - Excellence In All We Do</em></h2>
     </div>
 
 
@@ -31,17 +32,53 @@
 
         <!-- Hidden form so we can bind input boxes without showing an entire form -->
         <form action="main.py" id="inputdata"><input type="hidden" name="id" value="1" method="get"/></form>
-        
-        <input form="inputdata" type="text" name="1reserve" value="$r1"/>
-        <input form="inputdata" type="text" name="1main" value="$m1"/>
-        <input form="inputdata" type="text" name="2main" value="m2"/>
-        <input form="inputdata" type="text" name="forwardbody" value="$fwd"/>
-        <input form="inputdata" type="text" name="centerwing" value="$center"/>
-        <input form ="inputdata" type="text" name="aftbody" value="$aft"/>
-        <input form="inputdata" type="text" name="upperdeck" value="$up"/>
-        <input form="inputdata" type="text" name="3main" value="$m3"/>
-        <input form="inputdata" type="text" name="4main" value="$m4"/>
-        <input form="inputdata" type="text" name="4reserve" value="$r4"/>
+
+        <div class="cell" id="fwd">
+            <h3>Forward Body</h3>
+            <input form="inputdata" type="text" name="forwardbody" value="$fwd">
+        </div>
+
+
+        <div class="cell" id="onereserve">
+            <h3>#1 Reserve</h3>
+            <input form="inputdata" type="text" name="1reserve" value="$r1"/>
+        </div>
+        <div class="cell" id="onemain">
+            <h3>#1 Main</h3>
+            <input form="inputdata" type="text" name="1main" value="$m1"/>
+        </div>
+
+
+        <div class="cell" id="twomain">
+            <h3>#2 Main</h3>
+            <input form="inputdata" type="text" name="2main" value="$m2"/>
+        </div>
+        <div class="cell" id="centerwing">
+            <h3>Center Wing</h3>
+            <input form="inputdata" type="text" name="centerwing" value="$center"/>
+        </div>
+        <div class="cell" id="aftbody">
+            <h3>Aft Body</h3>
+            <input form="inputdata" type="text" name="aftbody" value="$aft"/>
+        </div>
+        <div class="cell" id="upperdeck">
+            <h3>Upper Deck</h3>
+            <input form="inputdata" type="text" name="upperdeck" value="$up"/>
+        </div>
+
+        <div class="cell" id="threemain">
+            <h3>#3 Main</h3>
+            <input form="inputdata" type="text" name="3main" value="$m3"/>
+        </div>
+        <div class="cell" id="fourmain">
+            <h3>#4 Main</h3>
+            <input form="inputdata" type="text" name="4main" value="$m4"/>
+        </div>
+        <div class="cell" id="fourreserve">
+            <h3>#4 Reserve</h3>
+            <input form="inputdata" type="text" name="4reserve" value="$r4"/>
+        </div>
+
 
 
     </div>
