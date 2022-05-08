@@ -16,7 +16,7 @@
 
 
     <div id="headings">
-        <h1 align=center>Mil<img style="margin-bottom:0px; margin-left:1px;" src="fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
+        <h1>Mil<img style="margin-bottom:0px; margin-left:1px;" src="fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
         <hr id="solid">
         <h2><em>Integrity First - Service Before Self - Excellence In All We Do</em></h2>
     </div>
@@ -79,7 +79,72 @@
             <input form="inputdata" type="text" name="4reserve" value="$r4"/>
         </div>
 
+    </div>
 
+
+
+
+    <div class="resultbox">
+        <div class="col">
+
+            <div class="leftrow">
+                <h3>Basic Weight</h3>
+                <input form="inputdata" type="text" name="basicweight" value="$basicWeight"/>
+            </div>
+            <div class="leftrow">
+                <h3>Basic Moment</h3>
+                <input form="inputdata" type="text" name="basicmoment" value="$basicMoment"/>
+            </div>
+            <div class="leftrow">
+                <h3>Fuel Density</h3>
+                <input form="inputdata" type="text" name="fueldensity" value="$fuelDensity"/>
+            </div>
+
+        </div>
+
+
+
+        <div class="col">
+            <p><u>Instructions:</u></p>
+            <p>Enter fuel load</p>
+            <p>Enter basic weight, moment and fuel density</p>
+            <p>Press calculate</p>
+            <p style="color:red;">Please use only whole numbers or decimals. No symbols</p>
+            <form action="main.py">
+                <input type="submit" value="Reset" />
+                <input type="submit" form="inputdata" value="Calculate">
+            </form>
+
+
+        </div>
+
+
+        <div class="col">
+
+
+            <div class="rightrow">
+                <h3>Total Fuel Weight:</h3>
+                <a>$totalFuel</a>
+            </div>
+            <div class="rightrow">
+                <h3>Total Weight:</h3>
+                <a>$totalWeight</a>
+            </div>
+            <div class="rightrow">
+                <h3>Final Arm:</h3>
+                <a>$finalArm</a>
+            </div>
+            <div class="rightrow">
+                <h3>Total Moment:</h3>
+                <a>$totalMoment</a>
+            </div>
+            <div class="rightrow">
+                <h3>%MAC (+-0.5%):</h3>
+                <a>$finalCG</a>
+            </div>
+
+
+        </div>
 
     </div>
 
