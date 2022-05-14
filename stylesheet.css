@@ -89,7 +89,7 @@ body {
         "up up up up up up up";
     padding: .5em;
     height: 40vh;
-    background-image: url('bg.jpg');
+    background-image: url('https://mildenhallmac.com/images/bg.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +107,7 @@ body {
             "twom up fourr";
         padding: .5em;
         height: 30vh;
-        background-image: url('bg.jpg');
+        background-image: url('https://mildenhallmac.com/images/bg.jpg');
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: cover;
@@ -228,7 +228,7 @@ body {
     flex-direction: row;
     flex-basis: 100%;
     align-items: center;
-    background-image: url('bg.jpg');
+    background-image: url('https://mildenhallmac.com/images/bg.jpg');
     background-position: 0 -42vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -481,7 +481,7 @@ body {
 /* Start of Privacy Page */
 .privacy {
     padding: 1.5em;
-    background-image: url('bg.jpg');
+    background-image: url('https://mildenhallmac.com/images/bg.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -513,7 +513,7 @@ body {
 /* Start of Support Page */
 .support {
     padding: 1.5em;
-    background-image: url('bg.jpg');
+    background-image: url('https://mildenhallmac.com/images/bg.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -542,6 +542,50 @@ body {
 
 .support textarea {
     max-width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+.support {
+    padding: 1.5em;
+    background-image: url('https://mildenhallmac.com/images/bg.jpg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+
+.support .box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    border: 2px solid white;
+
+}
+
+.support .column {
+    flex: 33.33%;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+
+}
+
+
+.support h2 {
+    font-size: 16px;
+}
+
+
+.support input {
+    max-width: 50%;
+}
+
+.support textarea {
+    max-width: 50%;
+}
+
+
 }
 
 
