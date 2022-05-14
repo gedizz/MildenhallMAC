@@ -389,7 +389,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 33.33%;
-    height: 25vh;
+    height: 100%;
     align-items: center;
     text-align: center;
     padding: 5px;
@@ -402,7 +402,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     flex-basis: 15%;
-    padding: 7% 0 38% 0;
+    padding-bottom: 30px;
     align-items: center;
     width: 100%;
 }
@@ -443,7 +443,9 @@ body {
 
 .resultbox .col .middlerow input{
     font-size: 11px;
-    width: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
 
 }
