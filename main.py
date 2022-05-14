@@ -1,7 +1,12 @@
+#!/usr/bin/python3
 
 #!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
-#!/usr/bin/python3
+
+#!/usr/bin/env python3
+
 # Shebang to be added to my windows.
+#!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
+
 import cgitb
 import cgi
 from string import Template
@@ -297,11 +302,11 @@ html_replaced = Template(html).safe_substitute(
     fuelWeight="%s" % (data["fuelweight"]),
     fuelDensity="%s" % (data["fueldensity"]),
 
-    totalWeight="%s" % totalWeightCalculation,
+    totalWeight="%s" % round(totalWeightCalculation, 2),
     finalArm="%s" % round(finalArm, 1),
     totalMoment="%s" % round(totalMoment, 1),
     finalCG="%s" % round(finalCG, 1),
-    totalFuel="%s" % totalFuelWeightCalculation,
+    totalFuel="%s" % round(totalFuelWeightCalculation, 2),
 
     overOrUnder="%s" % overOrUnder,
     overOrUnderColor="%s" % overOrUnderColor)
