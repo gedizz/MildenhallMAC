@@ -1,10 +1,7 @@
+
 #!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
-
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
 # Shebang to be added to my windows.
-#!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
-
 import cgitb
 import cgi
 from string import Template
@@ -12,7 +9,7 @@ import calc
 
 cgitb.enable()
 print("Content-Type: text/html;charset=utf-8")
-print()  # <----------- additional newline for header/body separation.
+print("")  # <----------- additional newline for header/body separation.
 # <meta http-equiv="refresh" content="60" >
 # Below is the return to other parts of the website
 
@@ -78,7 +75,7 @@ html = """
 <head>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="stylesheet.css"/>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://mildenhallmac.com/images/favicon.ico">
     <meta charset="UTF-8">
     <title>Mildenhall MAC</title>
 
@@ -300,11 +297,11 @@ html_replaced = Template(html).safe_substitute(
     fuelWeight="%s" % (data["fuelweight"]),
     fuelDensity="%s" % (data["fueldensity"]),
 
-    totalWeight="%s" % round(totalWeightCalculation, 2),
+    totalWeight="%s" % totalWeightCalculation,
     finalArm="%s" % round(finalArm, 1),
     totalMoment="%s" % round(totalMoment, 1),
     finalCG="%s" % round(finalCG, 1),
-    totalFuel="%s" % round(totalFuelWeightCalculation, 2),
+    totalFuel="%s" % totalFuelWeightCalculation,
 
     overOrUnder="%s" % overOrUnder,
     overOrUnderColor="%s" % overOrUnderColor)
