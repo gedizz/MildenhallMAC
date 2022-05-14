@@ -520,29 +520,28 @@ body {
 
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.support .box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-h2 {
-font-size: 4vw;
+.support .column {
+    flex: 33.33%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.support h2 {
+    font-size: 20px;
 }
 
-input {
-max-width: 100%;
+
+.support input {
+    max-width: 100%;
 }
 
-textarea {
-max-width: 100%;
+.support textarea {
+    max-width: 100%;
 }
 
 
