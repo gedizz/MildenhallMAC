@@ -481,6 +481,38 @@ body {
     border-top: 0px;
 }
 
+.resultbox .col .cg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 20%;
+    align-items: center;
+    width: 100%;
+}
+
+.resultbox .col .cg h3 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADADAA;
+    width: 100%;
+    font-size: 12px;
+    border: 2px solid black;
+}
+
+.resultbox .col .cg a{
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid black;
+    border-top: 0px;
+}
+
 
 }
 
