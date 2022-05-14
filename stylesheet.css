@@ -333,6 +333,38 @@ body {
     border-left: 0px;
 }
 
+.resultbox .col .cg {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-basis: 20%;
+    align-items: center;
+    width: 100%;
+}
+
+.resultbox .col .cg h3 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADADAA;
+    width: 100%;
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+.resultbox .col .cg a{
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    font-size: 18px;
+    border: 2px solid black;
+    border-left: 0px;
+}
+
 /* End of basic weight and calculation flexbox */
 
 /* Basic Weight Mobile */
