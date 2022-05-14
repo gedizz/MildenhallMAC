@@ -1,4 +1,5 @@
 #!C:\Users\Aegis\AppData\Local\Programs\Python\Python310\python.exe
+
 #!/usr/bin/env python3
 
 # Shebang to be added to my windows.
@@ -89,7 +90,7 @@ html = """
 
 
     <div id="headings">
-        <h1>Mil<img style="margin-bottom:0px; margin-left:1px;" src="fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
+        <h1>Mil<img style="margin-bottom:0px; margin-left:1px;" src="https://mildenhallmac.com/images/fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
         <hr id="solid">
         <h2><em>Integrity First - Service Before Self - Excellence In All We Do</em></h2>
     </div>
@@ -299,11 +300,11 @@ html_replaced = Template(html).safe_substitute(
     fuelWeight="%s" % (data["fuelweight"]),
     fuelDensity="%s" % (data["fueldensity"]),
 
-    totalWeight="%s" % totalWeightCalculation,
+    totalWeight="%s" % round(totalWeightCalculation, 2),
     finalArm="%s" % round(finalArm, 1),
     totalMoment="%s" % round(totalMoment, 1),
     finalCG="%s" % round(finalCG, 1),
-    totalFuel="%s" % totalFuelWeightCalculation,
+    totalFuel="%s" % round(totalFuelWeightCalculation, 2),
 
     overOrUnder="%s" % overOrUnder,
     overOrUnderColor="%s" % overOrUnderColor)
