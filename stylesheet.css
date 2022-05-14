@@ -59,6 +59,8 @@
   text-decoration: underline gray;
   text-decoration-style: double;
 }
+
+
 /* Navbar End */
 
 
@@ -101,6 +103,7 @@ body {
         padding: .5em;
         height: 30vh;
         background-image: url('bg.jpg');
+        background-position: 0 0;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -271,6 +274,27 @@ body {
     border-left: 0px;
 }
 
+.resultbox .col .middlerow {
+    text-align: center;
+
+}
+
+.resultbox .col .middlerow h1{
+    padding: 2px;
+    font-size: 20px;
+
+}
+
+.resultbox .col .middlerow input{
+    width: 25%;
+
+}
+
+.resultbox .col .middlerow p{
+    padding: 2px;
+
+}
+
 
 .resultbox .col .rightrow {
     display: flex;
@@ -305,6 +329,123 @@ body {
 }
 
 /* End of basic weight and calculation flexbox */
+
+/* Basic Weight Mobile */
+@media only screen and (max-width: 800px) {
+
+.resultbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: url('bg.png');
+    background-position: 0 0vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+    margin: -2px;
+
+}
+
+
+
+.resultbox .col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.33%;
+    height: 25vh;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+.resultbox .col .leftrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 15%;
+    padding: 7% 0 38% 0;
+    align-items: center;
+    width: 100%;
+}
+
+.resultbox .col .leftrow h3 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADADAA;
+    width: 100%;
+    font-size: 12px;
+    border: 2px solid black;
+}
+
+.resultbox .col .leftrow input{
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid black;
+    border-top: 0px;
+}
+
+.resultbox .col .middlerow {
+    text-align: center;
+
+}
+
+.resultbox .col .middlerow h1{
+    padding: 2px;
+    font-size: 20px;
+
+}
+
+.resultbox .col .middlerow input{
+    font-size: 11px;
+    width: 45%;
+    text-align: center;
+
+}
+
+
+.resultbox .col .rightrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 20%;
+    align-items: center;
+    width: 100%;
+}
+
+.resultbox .col .rightrow h3 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADADAA;
+    width: 100%;
+    font-size: 12px;
+    border: 2px solid black;
+}
+
+.resultbox .col .rightrow a{
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid black;
+    border-top: 0px;
+}
+
+
+}
 
 
 
