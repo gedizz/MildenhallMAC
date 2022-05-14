@@ -374,7 +374,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: url('bg.png');
+    background: url('https://mildenhallmac.com/bg.png');
     background-position: 0 0vh;
     background-repeat: no-repeat;
     background-size: cover;
