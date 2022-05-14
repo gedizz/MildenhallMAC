@@ -77,36 +77,6 @@ body {
 }
 
 
-
-.privacy {
-    padding: 1.5em;
-    background-image: url('bg.jpg');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.privacy h1{
-    color: white;
-
-}
-
-.privacy h2{
-    color: white;
-
-}
-
-.privacy p {
-    color: white;
-
-}
-
-.privacy li {
-    color: white;
-
-}
-
 /* Start of main fuel load table */
 .textarea {
     display: grid;
@@ -506,3 +476,74 @@ body {
         border-top: 1px solid white;
     }
 }
+
+
+/* Start of Privacy Page */
+.privacy {
+    padding: 1.5em;
+    background-image: url('bg.jpg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.privacy h1{
+    color: white;
+
+}
+
+.privacy h2{
+    color: white;
+
+}
+
+.privacy p {
+    color: white;
+
+}
+
+.privacy li {
+    color: white;
+
+}
+/* End of Privacy Page */
+
+
+/* Start of Support Page */
+.support {
+    padding: 1.5em;
+    background-image: url('bg.jpg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+h2 {
+font-size: 4vw;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+max-width: 100%;
+}
+
+textarea {
+max-width: 100%;
+}
+
+
+/* End of Support Page */
