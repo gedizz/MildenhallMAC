@@ -212,9 +212,10 @@ html = """
                 <h3>Total Moment:</h3>
                 <a>$totalMoment</a>
             </div>
-            <div class="rightrow">
+            <div class="cg">
                 <h3>%MAC (+-0.5%):</h3>
                 <a>$finalCG</a>
+                <a style="background-color:$overOrUnderColor">$overOrUnder</a>
             </div>
 
 
