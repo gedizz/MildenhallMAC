@@ -72,320 +72,162 @@ totalWeightCalculation += float(data["basicweight"])
 # Below is all HTML
 html = """
 <!DOCTYPE html>
-<html>
-<title>Mildenhall MAC</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<meta name="viewport" content="width=device-width, user_scalable=no, target-densitydpi=low-dpi"/>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196094589935856" crossorigin="anonymous">
-</script>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Mildenhall MAC</title>
 
-
-<style>
+</head>
 
 
-table {
-  border:0px solid black;
-  font-size: .8vw
-}
-
-body {
-margin: 0px;
-padding: 0px;
-}
-
-
-.row {
-width: 100%
-}
-
-.specialtable {
-    border:1px solid black;
-}
-
-th {
-border:1px solid black;
-}
-
-.special {
-border:0px;
-}
-
-td {
-  width: 14.2%;
-  border:1px solid black;
-}
-
-.specialtd {
-  border:1px solid black;
-}
-
-input {
-margin-top: 5px;
-margin-bottom: 5px;
-}
-
-footer {
-width:100%;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media only screen and (max-width: 800px) {
-  img.iosandroid {
-    width: 25vw
-  }
-}
-
-
-</style>
 <body>
 
-<h1 align=center>Mil<img style="margin-bottom:7px; margin-left:1px;" src="fav32.png" alt="logo"/>enhall %MAC Calculator</h1>
 
 
+    <div id="headings">
+        <h1>Mil<img style="margin-bottom:0px; margin-left:1px;" src="fav32.png" height="22" width="16" alt="logo"/>enhall %MAC Calculator</h1>
+        <hr id="solid">
+        <h2><em>Integrity First - Service Before Self - Excellence In All We Do</em></h2>
+    </div>
 
 
+    <div class="topnav" id="myTopnav">
+      <a href="main.py" class="active">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
 
-<!-- Main Table -->
-<table style="width:100%">
+    <div class="textarea">
 
+        <!-- Hidden form so we can bind input boxes without showing an entire form -->
+        <form action="main.py" id="inputdata"><input type="hidden" name="id" value="1" method="get"/></form>
 
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <th style="background-color:#ADADAA">Forward Body</th>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
-
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td align=center><input form="form1" type="text" name="forwardbody" value="$fwd" /></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
+        <div class="cell" id="fwd">
+            <h3>Forward Body</h3>
+            <input form="inputdata" type="text" name="forwardbody" value="$fwd">
+        </div>
 
 
-  <tr style="background-color:#ADADAA">
-    <th>#1 Reserve</th>
-    <th>#1 Main</th>
-    <th>#2 Main</th>
-    <th>Center Wing</th>
-    <th>#3 Main</th>
-    <th>#4 Main</th>
-    <th>#4 Reserve</th>
-  </tr>
+        <div class="cell" id="onereserve">
+            <h3>#1 Reserve</h3>
+            <input form="inputdata" type="text" name="1reserve" value="$r1"/>
+        </div>
+        <div class="cell" id="onemain">
+            <h3>#1 Main</h3>
+            <input form="inputdata" type="text" name="1main" value="$m1"/>
+        </div>
 
 
-  <form action="main.py" id="form1"><input type="hidden" name="id" value="1" method="get"/></form>
+        <div class="cell" id="twomain">
+            <h3>#2 Main</h3>
+            <input form="inputdata" type="text" name="2main" value="$m2"/>
+        </div>
+        <div class="cell" id="centerwing">
+            <h3>Center Wing</h3>
+            <input form="inputdata" type="text" name="centerwing" value="$center"/>
+        </div>
+        <div class="cell" id="aftbody">
+            <h3>Aft Body</h3>
+            <input form="inputdata" type="text" name="aftbody" value="$aft"/>
+        </div>
+        <div class="cell" id="upperdeck">
+            <h3>Upper Deck</h3>
+            <input form="inputdata" type="text" name="upperdeck" value="$up"/>
+        </div>
 
-  <tr>
-    <td align=center><input form="form1" type="text" name="1reserve" value="$r1" /></td>
-    <td align=center><input form="form1" type="text" name="1main" value="$m1" /></td>
-    <td align=center><input form="form1" type="text" name="2main" value="$m2" /></td>
-    <td align=center><input form="form1" type="text" name="centerwing" value="$center" /></td>
-    <td align=center><input form="form1" type="text" name="3main" value="$m3" /></td>
-    <td align=center><input form="form1" type="text" name="4main" value="$m4" /></td>
-    <td align=center><input form="form1" type="text" name="4reserve" value="$r4" /></td>
-  </tr>
-
-
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <th style="background-color:#ADADAA">Aft Body</th>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
-
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td align=center><input form="form1" type="text" name="aftbody" value="$aft" /></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
-
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <th style="background-color:#ADADAA">Upper Deck</th>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
-
-  <tr>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td align=center><input form="form1" type="text" name="upperdeck" value="$up" /></td>
-    <td class="special"></td>
-    <td class="special"></td>
-    <td class="special"></td>
-  </tr>
-
-</table>
-
-
-
-
-<!-- Aircraft Weights -->
-<div class="row">
-    <div class="column">
-
-
-        <table>
-
-
-
-          <tr>
-            <td style="background-color:#ADADAA">Basic Weight</td>
-            <td align=center><input form="form1" type="text" name="basicweight" value="$basicWeight" /></td>
-          </tr>
-
-
-          <tr>
-            <td style="background-color:#ADADAA">Basic Moment</td>
-            <td align=center><input form="form1" type="text" name="basicmoment" value="$basicMoment" /></td>
-          </tr>
-
-
-
-
-          <tr>
-            <td style="background-color:#ADADAA">Fuel Density</td>
-            <td align=center><input form="form1" type="text" name="fueldensity" value="$fuelDensity" /></td>
-          </tr>
-
-        </table> 
+        <div class="cell" id="threemain">
+            <h3>#3 Main</h3>
+            <input form="inputdata" type="text" name="3main" value="$m3"/>
+        </div>
+        <div class="cell" id="fourmain">
+            <h3>#4 Main</h3>
+            <input form="inputdata" type="text" name="4main" value="$m4"/>
+        </div>
+        <div class="cell" id="fourreserve">
+            <h3>#4 Reserve</h3>
+            <input form="inputdata" type="text" name="4reserve" value="$r4"/>
+        </div>
 
     </div>
 
 
 
-<!-- space in between -->   
-    <div class="column">
 
-        <table style="border:0px;">
+    <div class="resultbox">
+        <div class="col">
 
-          <tr>
-            <td align=center class="special">
-                <p><u>Instructions:</u></p>
+            <div class="leftrow">
+                <h3>Basic Weight</h3>
+                <input form="inputdata" type="text" name="basicweight" value="$basicWeight"/>
+            </div>
+            <div class="leftrow">
+                <h3>Basic Moment</h3>
+                <input form="inputdata" type="text" name="basicmoment" value="$basicMoment"/>
+            </div>
+            <div class="leftrow">
+                <h3>Fuel Density</h3>
+                <input form="inputdata" type="text" name="fueldensity" value="$fuelDensity"/>
+            </div>
+
+        </div>
+
+
+
+        <div class="col">
+            <div class="middlerow">
+                <h1><u>Instructions:</u></h1>
                 <p>Enter fuel load</p>
                 <p>Enter basic weight, moment and fuel density</p>
                 <p>Press calculate</p>
-                <p style="color:red;">Please use only whole numbers or decimals. No symbols</p>
-            </td>
-          </tr>
+                <p style="color:red;">Please use only whole numbers or decimals.</p>
+                <form action="main.py">
+                    <input type="submit" value="Reset" />
+                    <input type="submit" form="inputdata" value="Calculate">
+                </form>
+            </div>
 
-        </table> 
-    </div>
-
-
-
-<!-- Result Table -->   
-
-    <div align=right class="column">
+        </div>
 
 
-        <table>
-
-          <tr>
-            <td colspan="2" style="background-color:#ADADAA">Total Fuel Weight:</td>
-            <td>$totalFuel</td>
-          </tr>
-          
-          <tr>
-            <td colspan="2" style="background-color:#ADADAA">Total Weight:</td>
-            <td>$totalWeight</td>
-          </tr>
+        <div class="col">
 
 
-         <tr>
-            <td colspan="2" style="background-color:#ADADAA">Final Arm:</td>
-            <td>$finalArm</td>
-         </tr>
+            <div class="rightrow">
+                <h3>Total Fuel Weight:</h3>
+                <a>$totalFuel</a>
+            </div>
+            <div class="rightrow">
+                <h3>Total Weight:</h3>
+                <a>$totalWeight</a>
+            </div>
+            <div class="rightrow">
+                <h3>Final Arm:</h3>
+                <a>$finalArm</a>
+            </div>
+            <div class="rightrow">
+                <h3>Total Moment:</h3>
+                <a>$totalMoment</a>
+            </div>
+            <div class="rightrow">
+                <h3>%MAC (+-0.5%):</h3>
+                <a>$finalCG</a>
+            </div>
 
 
-          <tr>
-            <td colspan="2" style="background-color:#ADADAA">Total Moment:</td>
-            <td>$totalMoment</td>
-          </tr>
-
-          <tr>
-            <td style="background-color:#ADADAA">%MAC (+-0.5%):</td>
-            <td>$finalCG</td>
-            <td style="background-color:$overOrUnderColor">$overOrUnder</td>
-          </tr>
-
-        </table> 
+        </div>
 
     </div>
-</div>
 
-
-<!-- Submit and Reset button -->
-
-<div align=center style=margin-top:10px>
-    <form action="main.py">
-        <input type="submit" value="Reset" />
-    </form>
-</div>
-
-
-<div align=center style=margin-top:10px>
-    <input type="submit" form="form1" value="Calculate">
-</div>
-
-
-<div align=center style=margin-top:10px>
-    <a href="https://apps.apple.com/us/app/mildenhall-mac/id1622921836"><img class="thatimage" src="ios.png" alt="iOS Link"></a>
-    <img src="android.png">
-</div>
-
-
-<div align=center>
-    <h2>Coming Soon!</h2>
-</div>
 
 
 
 
 </body>
-
-
-
-
-<!-- Footer -->
-<footer align=center style=margin-top:50px>
-  <p>Created by A1C Geditz</p>
-</footer>
-
+    <footer class="footer">Designed by A1C Geditz and Dylan Williams</footer>
 </html>
 
 """
